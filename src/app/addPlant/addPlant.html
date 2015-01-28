@@ -1,0 +1,41 @@
+
+  <form class="panel panel-default" name="addPlantForm" novalidate>
+        <div class="panel-heading">
+            <h3 class="panel-title">Add a plant</h3>
+        </div>
+        <div class="panel-body">
+           <div class="image-container">
+            <img ng-src="{{plant.src}}">  
+          </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+             <h3 class="panel-title">Image url</h3>
+          </div>
+          <div class="panel-body">
+            <input type="text" class="form-control" placeholder="input a url for the custom image" ng-model="plant.src">
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+             <h3 class="panel-title">Plant`s name</h3>
+          </div>
+          <div class="panel-body">
+            <input name="plantName" type="text" class="form-control" ng-model="plant.name" required>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+             <h3 class="panel-title">Plant`s watering period</h3>
+          </div>
+          <div class="panel-body">
+            <input name="plantWatering" type="number" class="form-control" ng-model="plant.watering" ngPattern="/^\d+$/A" required min="0">
+          </div>
+        </div>
+         <button class="btn btn-default" type="button" ng-click="addPlant()" ng-disabled="addPlantForm.$invalid">Done</button>
+      </div>
+    </form>
+
+    

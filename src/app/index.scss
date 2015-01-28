@@ -1,0 +1,42 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: 200px;
+
+  img.pull-right {
+    width: 50px;
+  }
+}
+.watering {
+
+	&_timeline {
+		display:block;
+		&_item {
+			float: left;
+			width: 40px;
+			height:10px;
+			margin-left: 5px;
+			margin-top: 10px;
+		}
+		&_watered {
+			background-color: green;
+		}
+		&_unwatered {
+			background-color: red;
+		}
+	}
+	
+}
+.has-error {
+	border-radius: 25px 25px 25px 25px;
+	-moz-border-radius: 25px 25px 25px 25px;
+	-webkit-border-radius: 25px 25px 25px 25px;
+	border: 10px solid #ff0000;
+}
+// injector
+// endinjector
