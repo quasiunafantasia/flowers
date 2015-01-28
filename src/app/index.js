@@ -6,7 +6,7 @@ angular.module('flowersJs', ['ngRoute', 'ui.bootstrap'])
   .config(function ($routeProvider) {
     $routeProvider
        .when ("/", {
-        templateUrl: "app/index.html",
+        templateUrl: "app/welcome.html",
         controller: ""
  
       })
