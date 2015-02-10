@@ -38,30 +38,11 @@ describe("AddPlantCtrl", function () {
         });
     }
     
-    it("should return an iterable of length = days without watering", function() {
-        daysDiff = 2;
-        executeController();
-        var arr = scope.getDays({wateringDate: 1});
-        expect(arr.length).toEqual(2);
-    });
-
-    it("should water the plant", function() {
-        storedPlants = [{
+    it("should get the plants collection from the localStorage", function() {
+         storedPlants = [{
             test: 123
         }];
         executeController();
-        var plant = scope.plants[0];
-        scope.water(plant);
-        expect(mockWateringService.water).toHaveBeenCalledWith(plant);
-    });
-
-    it("should update the plants in the local storage after watering", function() {
-        storedPlants = [{
-            test: 123
-        }];
-        executeController();
-        var plant = scope.plants[0];
-        scope.water(plant); //call by reference
-        expect(mockLocalStorage.replacePlants).toHaveBeenCalledWith(storedPlants);
+        expect(scope.plants).toEqual(storedPlants);
     });
 });

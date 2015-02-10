@@ -1,0 +1,9 @@
+<div class="panel-body" ng-class="{'has-error': isDying(data)}">
+   <div class="image-container">
+    <img ng-src="{{data.src}}">
+    <div class="watering">
+    	<watering days={{getDays(data)}}>
+    	</watering>
+    	<button class="btn btn-default watering_water-button" type="button" ng-click="water(data)">water me</button>
+   </div>
+</div>

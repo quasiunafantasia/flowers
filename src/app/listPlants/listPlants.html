@@ -3,25 +3,8 @@
 	<h2> Hey, your plants were missing you :o </h2>
 	<ul class="list-group">
 		
-	  <li class="list-group-item" data-ng-repeat="plant in plants track by $index">
-	  	<div class="panel panel-default" ng-class="{'has-error': isDying(plant)}">
-	        <div class="panel-heading">
-	            <h3 class="panel-title">{{plant.name}}</h3>
-	        </div>
-	        <div class="panel-body">
-	           <div class="image-container">
-	            <img ng-src="{{plant.src}}">
-	            <div class="watering">
-	            	<div class="watering_timeline">
-	            		<div class="watering_timeline_item watering_timeline_watered"></div>
-	            	<div class = "watering_timeline_item watering_timeline_unwatered" ng-repeat="value in getDays(plant) track by $index"></div>
-	            	</div>
-	            	
-	            	<button class="btn btn-default watering_water-button" type="button" ng-click="water(plant)">water me</button>
-	           </div>
-	        </div>
-	  	</div>
-
+	  <li class="list-group-item" data-ng-repeat="plantData in plants track by $index">
+	  	<plant data="plantData">
 	  </li>
 
 	</ul>
